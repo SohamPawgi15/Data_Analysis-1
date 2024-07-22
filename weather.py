@@ -35,3 +35,23 @@ print(data.isnull().sum())
 print("\n Answer for Q.5: ")
 rename = data.rename(columns={'Weather':'Weather Condition'})
 print(rename)
+
+# Q.6) What is the mean 'Visibility'?
+print("\n Answer for Q.6: ")
+print(round(data.Visibility_km.mean(),2))
+
+# Q.7) What is the standard deviation of 'Pressure' in this data?
+print("\n Answer for Q.7: ")
+print(round(data.Press_kPa.std(),2))
+
+# Q.8) What is the variance of 'Relative Humidity' in this data?
+print("\n Answer for Q.8: ")
+print(round(data['Rel Hum_%'].var(),2))
+
+# Q.9) Find all instances when 'Snow' was recorded
+print("\n Answer for Q.9: ")
+print(data[data['Weather']=='Snow'])
+
+# Q.10) Find all instances when 'Wind speed is above 24' and 'Visibility is 25'
+print("\n Answer for Q.10: ")
+print(data[(data['Wind Speed_km/h']>24) & (data['Visibility_km'] == 25)])
